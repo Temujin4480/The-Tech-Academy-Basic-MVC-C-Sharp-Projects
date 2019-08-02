@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<head>
+<style>
+
+input[type=text], input[type=number], input[type=email], input[type=date] {
+    width: 100%;
+    padding: 12px 20px; 
+    margin: 8px 0; 
+    display: inline-block;
+    border: 1px solid #ccc; 
+    box-sizing: border-box; 
+}
+
+
+button {
+    background-color: #1E90FF;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+}
+</style>
+</head>
+
+<div class="jumbotron">
+    <h1 align="center">
+        Orka Car Insurance
+        <img src="../Orka.jpg" alt="Killer Whale">
+    </h1>
+    <h2 align="center">Enabling drunk drivers with low rates since 2019.  Fill out the form below to get your car insurance quote today!</h2>
+</div>
+
+<div class="container">
+    @using (Html.BeginForm("Quote", "Home", FormMethod.Post))
+    {
+        <label for="fname"><b>First Name</b></label>
+        <input type="text" placeholder="First Name" name="FirstName" required><br />
+
+        <label for="lname"><b>Last Name</b></label>
+        <input type="text" placeholder="Last Name" name="LastName" required><br />
+
+        <label for="eaddress"><b>Email Address</b></label>
+        <input type="email" placeholder="Email Address" name="EmailAddress" required><br />
+
+        <label for="dob"><b>Date of Birth</b></label>
+        <input type="date" placeholder="Date of Birth" name="DateOfBirth" required><br />
+
+        <label for="cyear"><b>Car Year</b></label>
+        <input type="number" placeholder="Car Year" name="CarYear" min="1900" max="2020" required><br />
+
+        <label for="cmake"><b>Car Make</b></label>
+        <input type="text" placeholder="Car Make" name="CarMake" required><br />
+
+        <label for="cmodel"><b>Car Model</b></label>
+        <input type="text" placeholder="Car Model" name="CarModel" required><br />
+
+        <b>Have you ever had a DUI?</b>;
+        <label for="dui"><b>No</b></label>
+        <input type="radio" name="DUI" id="no" value="false">
+        <label for="dui"><b>Yes</b></label>
+        <input type="radio" name="DUI" id="yes" value="true"><br />
+
+        <label for="tickets"><b>How many speeding tickets do you have?</b></label>
+        <input type="number" placeholder="Number of Speeding Tickets" name="SpeedingTickets" min="0" required><br />
+
+        <b>Which kind of coverage would you like?</b>;
+        <label for="coverage"><b>Liability</b></label>
+        <input type="radio" name="CoverageType" id="liability" value="false">
+        <label for="coverage"><b>Full</b></label>
+        <input type="radio" name="CoverageType" id="full" value="true"><br />
+
+        <button type="submit">Submit</button>
+    }
+
+
+</div>

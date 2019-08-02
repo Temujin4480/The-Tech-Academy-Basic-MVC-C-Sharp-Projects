@@ -1,0 +1,46 @@
+﻿@using CarInsuranceQuotes.ViewModels
+@model List<QuoteVm>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="m-0">Quote History</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">First Name</div>
+        <div class="col-3">Last Name</div>
+        <div class="col-3">Email Address</div>
+        <div class="col-3">Coverage Type</div>
+    </div>
+</div>
+
+<div class="container">
+    @foreach (var quote in Model)
+    {
+        using (Html.BeginForm("Index", "Admin", FormMethod.Post))
+        {
+            <input type="hidden" name="Id" value="@quote.Id" />
+            <div class="row">
+                <div class="col-3">
+                    @quote.FirstName
+                </div>
+                <div class="col-3">
+                    @quote.LastName
+                </div>
+                <div class="col-3">
+                    @quote.EmailAddress
+                </div>
+                <div class="col-3">
+                    @quote.CoverageType
+                    <!--Change this to Price later once I've created the method-->
+                </div>
+            </div>
+        }
+    }
+</div>
+
+
+
+
+
