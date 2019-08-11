@@ -15,6 +15,7 @@
     <Property Name="DUI" Type="Boolean" />
     <Property Name="SpeedingTickets" Type="Int16" />
     <Property Name="CoverageType" Type="Boolean" />
+    <Property Name="TotalCost" Type="Decimal" Precision="19" Scale="4" />
   </EntityType>
   <EntityContainer Name="CarInsuranceQuoteEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="QuoteVariables" EntityType="Self.QuoteVariable" />

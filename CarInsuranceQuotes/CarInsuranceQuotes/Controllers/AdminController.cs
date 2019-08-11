@@ -26,6 +26,7 @@ namespace CarInsuranceQuotes.Controllers
                     quoteVm.LastName = quote.LastName;
                     quoteVm.EmailAddress = quote.EmailAddress;
                     quoteVm.CoverageType = quote.CoverageType;
+                    quoteVm.TotalCost = quote.TotalCost; 
                     quoteVms.Add(quoteVm);
                 }
 

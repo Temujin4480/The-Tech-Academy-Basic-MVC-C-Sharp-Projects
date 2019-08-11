@@ -1,7 +1,31 @@
-﻿
+﻿@model CarInsuranceQuotes.Models.QuoteVariable
+
 @{
     ViewBag.Title = "Price";
 }
 
 <h2>The rate for your Orka Car Insurance plan is: </h2>
+@{ ViewBag.Title = "Quote"; }
+@{ var data = ViewBag.Message; }
+<h2>$@data.TotalCost</h2>
 
+
+@*The following code did not work for some unkown reason.  Even when I changed the using statements*@
+@*@using CarInsuranceQuotes.Models
+  @model List<QuoteVariable>*@
+
+@*<h2>The rate for your Orka Car Insurance plan is: @Html.DisplayFor(model => model.TotalCost)  </h2>*@
+
+@*<div class="row no-gutters">
+        <h2>The rate for your Orka Car Insurance plan is:</h2>
+
+
+
+        @foreach (var cost in Model)
+        {
+            using (Html.BeginForm("Quote", "Home", FormMethod.Post))
+            {
+                <h2>@cost.TotalCost</h2>
+            }
+        }
+    </div>*@

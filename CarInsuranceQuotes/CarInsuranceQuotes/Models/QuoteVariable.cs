@@ -25,5 +25,8 @@ namespace CarInsuranceQuotes.Models
         public Nullable<bool> DUI { get; set; }
         public Nullable<short> SpeedingTickets { get; set; }
         public Nullable<bool> CoverageType { get; set; }
+
+        //[DisplayFormat(DataFormatString = "{0:c}")]
+        public Nullable<decimal> TotalCost { get; set; }
     }
 }

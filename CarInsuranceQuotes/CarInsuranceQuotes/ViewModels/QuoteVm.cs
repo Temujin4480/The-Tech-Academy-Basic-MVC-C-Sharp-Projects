@@ -18,6 +18,6 @@ namespace CarInsuranceQuotes.ViewModels
         public bool? DUI { get; set; }
         public short SpeedingTickets { get; set; }
         public bool? CoverageType { get; set; }
-        //public int Age { get; set; }
+        public decimal? TotalCost { get; set; }
     }
 }

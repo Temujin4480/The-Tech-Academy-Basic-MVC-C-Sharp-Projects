@@ -20,6 +20,7 @@
           <Property Name="DUI" Type="bit" />
           <Property Name="SpeedingTickets" Type="smallint" />
           <Property Name="CoverageType" Type="bit" />
+          <Property Name="TotalCost" Type="money" />
         </EntityType>
         <EntityContainer Name="CarInsuranceQuoteModelStoreContainer">
           <EntitySet Name="QuoteVariables" EntityType="Self.QuoteVariables" Schema="dbo" store:Type="Tables" />
@@ -43,6 +44,7 @@
           <Property Name="DUI" Type="Boolean" />
           <Property Name="SpeedingTickets" Type="Int16" />
           <Property Name="CoverageType" Type="Boolean" />
+          <Property Name="TotalCost" Type="Decimal" Precision="19" Scale="4" />
         </EntityType>
         <EntityContainer Name="CarInsuranceQuoteEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="QuoteVariables" EntityType="Self.QuoteVariable" />
@@ -56,6 +58,7 @@
           <EntitySetMapping Name="QuoteVariables">
             <EntityTypeMapping TypeName="CarInsuranceQuoteModel.QuoteVariable">
               <MappingFragment StoreEntitySet="QuoteVariables">
+                <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
