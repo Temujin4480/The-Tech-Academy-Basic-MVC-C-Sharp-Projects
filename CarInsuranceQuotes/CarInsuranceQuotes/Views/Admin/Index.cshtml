@@ -1,5 +1,6 @@
 ﻿@using CarInsuranceQuotes.ViewModels
 @model List<QuoteVm>
+@*This probably should be using Models.QuoteVariable, but it's working as is, and I don't want to mess it up.*@
 
 <div class="container">
     <div class="row">
@@ -32,7 +33,7 @@
                     @quote.EmailAddress
                 </div>
                 <div class="col-3">
-                    @quote.TotalCost 
+                    @quote.TotalCost
                 </div>
             </div>
         }
